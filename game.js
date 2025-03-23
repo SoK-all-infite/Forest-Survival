@@ -194,7 +194,7 @@ function buildBarrel() {
     if (gameState.wood >= woodCost) {
         gameState.wood -= woodCost;
         gameState.barrelsCount++;
-        addLog(`Бочка построена! (использовано ${woodCost} древесины)`);
+        addLog(`Бочка построена! (теперь вода собирается автоматически)`);
         updateUI();
     } else {
         addLog(`Нужно ${woodCost} древесины для постройки бочки!`, true);
