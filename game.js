@@ -112,7 +112,7 @@ function searchWater() {
     const water = Math.floor(Math.random() * 30) + 10;
     gameState.water += water;
     addLog(`Найдено ${water} мл воды!`);
-    passTime(2);
+    passTime(1);
 }
 
 function explore() {
@@ -127,7 +127,7 @@ function explore() {
     }
     
     // Шанс найти древесину (40%)
-    if (Math.random() < 0.4) {
+    if (Math.random() < 0.3) {
         const wood = Math.floor(Math.random() * 5) + 2;
         gameState.wood += wood;
         addLog(`Найдено ${wood} древесины!`);
@@ -135,7 +135,7 @@ function explore() {
     }
     
     // Шанс найти камни (30%)
-    if (Math.random() < 0.2) {
+    if (Math.random() < 0.3) {
         const stones = Math.floor(Math.random() * 4) + 1;
         gameState.stones += stones;
         addLog(`Найдено ${stones} камней!`);
@@ -145,12 +145,12 @@ function explore() {
     if (!foundSomething) {
         addLog("Ничего не найдено...");
     }
-    passTime(4);
+    passTime(3);
 }
 
 function sleep() {
     if (gameState.time >= 6 && gameState.time < 18) {
-        addLog("Сейчас день! Невозможно спать днем", true);
+        addLog("Сейчас день! сложно спать днем", true);
         return;
     }
 
