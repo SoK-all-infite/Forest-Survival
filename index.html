@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forest Survival</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="status">
+    <div class="status-column">
+        <p>День: <span id="day">1</span></p>
+        <p>Период: <span id="timeOfDay">День</span></p>
+        <p>Голод: <span id="hunger">100</span>%</p>
+        <p>Жажда: <span id="thirst">100</span>%</p>
+        <p>Здоровье: <span id="health">100</span>%</p>
+    </div>
+    
+    <div class="status-column">
+        <p>Орехи: <span id="nuts">0</span></p>
+        <p>Вода: <span id="water">0</span> мл</p>
+        <p>Семена: <span id="seeds">0</span></p>
+        <p>Древесина: <span id="wood">0</span></p>
+        <p>Камни: <span id="stones">0</span></p>
+    </div>
+    
+    <div class="status-column">
+        <p>Укрытие: <span id="shelter">Нет</span></p>
+        <p>Ферма: <span id="farm">Нет</span></p>
+        <p>Бочки: <span id="barrels">0</span></p>
+        <p>Фильтр: <span id="waterFilter">Нет</span></p>
+    </div>
+</div>
+
+        <div id="actions">
+            <button onclick="collectNuts()">Собрать орехи</button>
+            <button onclick="searchWater()">Искать воду</button>
+            <button onclick="eat()">Съесть орехи</button>
+            <button onclick="drink()">Выпить воду</button>
+            <button onclick="sleep()">Спать(+здоровье)</button>
+            <button onclick="explore()">Исследовать(+древесина +камни +семена)</button>
+            <button onclick="buildWaterFilter()">Построить фильтр для воды (10 камней, 5 древесины)</button>
+            <button onclick="buildFarm()">Построить ферму(+орехи)</button>
+            <button onclick="buildBarrel()">Построить бочку +вода</button>
+            <button onclick="buildShelter()">Построить укрытие +безопасность</button>
+        </div>
+
+        <div id="log"></div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
