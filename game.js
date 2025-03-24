@@ -171,7 +171,7 @@ function sleep() {
     if (gameState.hasShelter) {
         addLog(`Вы легли спать до рассвета (${hoursToDawn} часов)...`);
     } else {
-        addLog(`Вы спите под открытым небом ${hoursToDawn} часов...`, true);
+        addLog(`Вы спите под открытым небом ${hoursToDawn} часов...`, false, true);
         checkPredators();
     }
 
